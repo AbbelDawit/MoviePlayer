@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     runs-on: macos-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -17,3 +18,4 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean package
+        working-directory: ${{ github.workspace }}
